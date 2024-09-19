@@ -20,12 +20,12 @@
 // o algoritmo mostra que com esse loop o codigo sera executado 11 vezes e cada execucao ira incrementar na variavel SOMA o valor atual de K.
 // levando isso em consideracao, ao final do processamento o valor da variavel soma sera 
 
-const myButton = document.getElementById('myButton');
-const message = document.getElementById('message');
+function changeMessage(title, development, answer) {
+  document.getElementById('message-title').textContent = title;
+  document.getElementById('message-development').textContent = development;
+  document.getElementById('message-answer').textContent = answer;
+}
 
-// Botao para primeira questao
-myButton.addEventListener('click', function() {
-    // Alterar o conteúdo do parágrafo quando o botão for clicado
-    message.textContent = 'Hello, you clicked the button!';
+document.getElementById('externalLinkButton').addEventListener('click', function() {
+  window.location.href = 'https://www.linkedin.com/in/jo%C3%A3o-vitor-rafagnin-611678129/'; // Substitua pelo URL desejado
 });
-

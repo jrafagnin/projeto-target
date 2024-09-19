@@ -4,23 +4,24 @@ body {
     background-color: #f4f4f4;
     text-align: center;
     padding: 20px;
+    margin: 0; /* Remova a margem padrão do body */
 }
 
 /* Estilos para a div do banner */
 .banner {
-    background-image: url('banner-image.jpg'); /* Caminho da imagem do banner */
+    background-image: url('assets/banner-target.jpg'); /* Caminho da imagem do banner */
     background-size: cover; /* Cobrir toda a área */
     background-position: center; /* Centralizar imagem */
     padding: 50px 20px; /* Espaçamento interno */
     border-radius: 10px; /* Bordas arredondadas */
     color: white; /* Cor do texto */
-    max-width: 600px; /* Largura máxima */
-    margin: 0 auto; /* Centraliza a div na página */
+    width: 100%; /* Ocupa 100% da largura da tela */
+    box-sizing: border-box; /* Inclui o padding e border na largura total */
+    position: relative; /* Para garantir que o banner ocupe a largura total */
 }
 
 /* Div para o título */
 .title-section {
-    background: rgba(0, 0, 0, 0.6); /* Fundo semitransparente */
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -34,16 +35,23 @@ body {
     color: #fff;
 }
 
-/* Div para o conteúdo, incluindo o botão */
+/* Div para o conteúdo, incluindo os botões */
 .content-section {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
 }
 
-/* Estilos para o botão */
-#myButton {
+/* Container para os botões */
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que os botões se movam para a linha seguinte em telas menores */
+    gap: 10px; /* Espaço entre os botões */
+}
+
+/* Estilos para os botões */
+button {
     background-color: #008CBA;
     color: white;
     padding: 10px 20px;
@@ -51,18 +59,54 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    margin-top: 20px;
+    margin: 5px; /* Adiciona um espaço ao redor dos botões */
 }
 
-#myButton:hover {
+button:hover {
     background-color: #005f73;
 }
 
+/* Estilos para o botão do link externo */
+#externalLinkButton {
+    background-color: #4CAF50; /* Cor diferente para destacar o botão de link externo */
+}
+
+#externalLinkButton:hover {
+    background-color: #45a049;
+}
+
 /* Estilos para a mensagem abaixo do banner */
-#message {
+#message-container {
     margin-top: 20px;
     font-size: 18px;
     color: #005f73;
     max-width: 600px;
     margin: 20px auto; /* Centraliza abaixo do banner */
+    display: flex;
+    flex-direction: column; /* Exibe os elementos em coluna */
+    align-items: center;
+    max-height: 200px; /* Altura máxima da área de mensagem */
+    overflow-y: auto; /* Adiciona rolagem vertical se o conteúdo ultrapassar a altura máxima */
+    padding: 20px; /* Adiciona um pouco de preenchimento */
+    border: 1px solid #ddd; /* Adiciona uma borda para separar a área da mensagem */
+    border-radius: 10px; /* Bordas arredondadas */
+    background-color: #fff; /* Fundo branco para destacar o texto */
+}
+
+/* Estilos para as partes da mensagem */
+#message-title, #message-development, #message-answer {
+    margin-bottom: 10px; /* Espaçamento entre as partes da mensagem */
+    width: 100%; /* Garante que cada parte ocupe a largura disponível */
+}
+
+#message-title {
+    font-weight: bold;
+}
+
+#message-development {
+    font-style: italic;
+}
+
+#message-answer {
+    font-weight: normal;
 }
