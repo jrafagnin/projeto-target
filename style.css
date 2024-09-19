@@ -3,8 +3,8 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     text-align: center;
-    padding: 20px;
-    margin: 0; /* Remova a margem padrão do body */
+    padding: 0;
+    margin: 0; /* Remove a margem padrão do body */
 }
 
 /* Estilos para a div do banner */
@@ -12,12 +12,14 @@ body {
     background-image: url('assets/banner-target.jpg'); /* Caminho da imagem do banner */
     background-size: cover; /* Cobrir toda a área */
     background-position: center; /* Centralizar imagem */
-    padding: 50px 20px; /* Espaçamento interno */
-    border-radius: 10px; /* Bordas arredondadas */
+    height: 473px; /* Altura específica do banner */
+    width: 100%; /* Ocupa 100% da largura */
+    display: flex; /* Usar Flexbox */
+    flex-direction: column; /* Empilhar os elementos verticalmente */
+    justify-content: center; /* Centralizar verticalmente */
+    align-items: center; /* Centralizar horizontalmente */
     color: white; /* Cor do texto */
-    width: 100%; /* Ocupa 100% da largura da tela */
     box-sizing: border-box; /* Inclui o padding e border na largura total */
-    position: relative; /* Para garantir que o banner ocupe a largura total */
 }
 
 /* Div para o título */
@@ -51,62 +53,74 @@ body {
 }
 
 /* Estilos para os botões */
-button {
-    background-color: #008CBA;
+.button {
+    background-color: #f57320;
     color: white;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 5px; /* Adiciona bordas arredondadas aos botões */
     cursor: pointer;
+    font-family: 'Gotham Regular', sans-serif; /* Fonte personalizada para botões */
     font-size: 16px;
     margin: 5px; /* Adiciona um espaço ao redor dos botões */
+    transition: 0.3s ease all; /* Transição suave para a mudança de estilo */
 }
 
-button:hover {
-    background-color: #005f73;
+.button:hover {
+    background-color: #F54C20;
+    transform: scale(1.1); /* Aumenta o tamanho do botão em 10% */
 }
 
 /* Estilos para o botão do link externo */
 #externalLinkButton {
-    background-color: #4CAF50; /* Cor diferente para destacar o botão de link externo */
+    background-color: #2867B2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; /* Adiciona bordas arredondadas aos botões */
+    cursor: pointer;
+    font-family: 'Gotham Regular', sans-serif; /* Fonte personalizada para botões */
+    font-size: 16px;
+    margin: 5px; /* Adiciona um espaço ao redor dos botões */
+    transition: 0.3s ease all; /* Transição suave para a mudança de estilo */
 }
 
 #externalLinkButton:hover {
-    background-color: #45a049;
+    background-color: #273AB3;
+    transform: scale(1.1); /* Aumenta o tamanho do botão em 10% */
 }
 
-/* Estilos para a mensagem abaixo do banner */
+/* Estilos para o contêiner da mensagem */
 #message-container {
+    height: auto; /* Altura ajustada automaticamente */
     margin-top: 20px;
-    font-size: 18px;
-    color: #005f73;
-    max-width: 600px;
-    margin: 20px auto; /* Centraliza abaixo do banner */
-    display: flex;
-    flex-direction: column; /* Exibe os elementos em coluna */
-    align-items: center;
-    max-height: 200px; /* Altura máxima da área de mensagem */
-    overflow-y: auto; /* Adiciona rolagem vertical se o conteúdo ultrapassar a altura máxima */
-    padding: 20px; /* Adiciona um pouco de preenchimento */
+    width: 100%; /* 90% da largura do banner para permitir espaço nas laterais */
+    max-width: 100%; /* Garante que a largura máxima não ultrapasse 90% */
+    overflow-x: hidden; /* Remove o scroll horizontal */
+    overflow-y: auto; /* Permite o scroll vertical */
+    padding: 10px; /* Adiciona um pouco de preenchimento */
     border: 1px solid #ddd; /* Adiciona uma borda para separar a área da mensagem */
-    border-radius: 10px; /* Bordas arredondadas */
+    border-radius: 8px; /* Bordas arredondadas */
     background-color: #fff; /* Fundo branco para destacar o texto */
+    box-sizing: border-box; /* Inclui o padding e border na largura total */
+    margin-left: auto; /* Centraliza horizontalmente */
+    margin-right: auto; /* Centraliza horizontalmente */
+    position: relative; /* Para ajustes futuros */
 }
 
-/* Estilos para as partes da mensagem */
-#message-title, #message-development, #message-answer {
-    margin-bottom: 10px; /* Espaçamento entre as partes da mensagem */
+/* Estilos para cada parte da mensagem */
+.message-box {
+    margin-bottom: 3px; /* Espaçamento entre as partes da mensagem */
+    padding: 3px;
+    border-radius: 3px;
     width: 100%; /* Garante que cada parte ocupe a largura disponível */
 }
 
+/* Estilos específicos para a imagem de título */
 #message-title {
-    font-weight: bold;
-}
-
-#message-development {
-    font-style: italic;
-}
-
-#message-answer {
-    font-weight: normal;
+    background-size: cover; /* Ajusta a imagem ao tamanho da div mantendo a proporção */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    width: 100%; /* Largura ajustada ao contêiner */
+    height: auto; /* Altura ajustada automaticamente pelo JavaScript */
 }

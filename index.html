@@ -13,17 +13,17 @@
     <div class="banner">
         <!-- Div para o título -->
         <div class="title-section">
-            <h1>Teste para Target Systems</h1>
+            <h1>Teste para Target Sistems</h1>
         </div>
 
         <!-- Div para o conteúdo, incluindo os botões -->
         <div class="content-section">
             <div class="button-container">
-                <button id="button1" onclick="changeMessage('Title 1', 'Development 1', 'Answer 1')">Questão 01</button>
-                <button id="button2" onclick="changeMessage('Title 2', 'Development 2', 'Answer 2')">Questão 02</button>
-                <button id="button3" onclick="changeMessage('Title 3', 'Development 3', 'Answer 3')">Questão 03</button>
-                <button id="button4" onclick="changeMessage('Title 4', 'Development 4', 'Answer 4')">Questão 04</button>
-                <button id="button5" onclick="changeMessage('Title 5', 'Development 5', 'Answer 5')">Questão 05</button>
+                <button class="button" data-id="1">Questao 01</button>
+                <button class="button" data-id="2">Questao 02</button>
+                <button class="button" data-id="3">Questao 03</button>
+                <button class="button" data-id="4">Questao 04</button>
+                <button class="button" data-id="5">Questao 05</button>
             </div>
             <button id="externalLinkButton">LinkedIn</button>
         </div>
@@ -31,9 +31,9 @@
 
     <!-- Mensagem será exibida aqui -->
     <div id="message-container">
-        <div id="message-title"></div>
-        <div id="message-development"></div>
-        <div id="message-answer"></div>
+        <div id="message-title" class="message-box"></div>
+        <div id="message-development" class="message-box"></div>
+        <div id="message-answer" class="message-box"></div>
     </div>
 
     <!-- Script JavaScript -->

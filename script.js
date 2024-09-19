@@ -1,30 +1,59 @@
-// 1) Observe o trecho de código:
+function updateMessage(messageTitleUrl, developmentText, answerText) {
+  // Atualiza a imagem de fundo
+  document.getElementById('message-title').style.backgroundImage = `url('${messageTitleUrl}')`;
+  
+  // Cria um novo elemento de imagem para obter a altura
+  const img = new Image();
+  img.src = messageTitleUrl;
 
-// int INDICE = 12, SOMA = 0, K = 1;
+  img.onload = function() {
+      // Define a altura do contêiner com base na altura da imagem carregada
+      document.getElementById('message-title').style.height = `${img.height}px`;
+  };
 
-// enquanto K < INDICE faça
-
-// { K = K + 1; SOMA = SOMA + K;}
-
-// imprimir(SOMA);
-
-
-// Ao final do processamento, qual será o valor da variável SOMA?
-
-// tendo em vista os seguintes dados:
-// indice = 12
-// soma = 0
-// K = 1
-
-// o algoritmo apresentado mostra um loop de while utilizando K como indice inicial e INDICE como indice final e implementando incremento em K com K=K+1, 
-// o algoritmo mostra que com esse loop o codigo sera executado 11 vezes e cada execucao ira incrementar na variavel SOMA o valor atual de K.
-// levando isso em consideracao, ao final do processamento o valor da variavel soma sera 
-
-function changeMessage(title, development, answer) {
-  document.getElementById('message-title').textContent = title;
-  document.getElementById('message-development').textContent = development;
-  document.getElementById('message-answer').textContent = answer;
+  // Atualiza o conteúdo dos outros elementos
+  document.getElementById('message-development').textContent = developmentText;
+  document.getElementById('message-answer').textContent = answerText;
 }
+
+// Mapeamento das imagens e textos para cada botão
+const messages = {
+  1: {
+      titleImage: 'assets/questao1.jpg',
+      developmentText: 'Desenvolvimento da Questão 1...',
+      answerText: 'Resposta para a Questão 1...'
+  },
+  2: {
+      titleImage: 'assets/questao2.jpg',
+      developmentText: 'Desenvolvimento da Questão 2...',
+      answerText: 'Resposta para a Questão 2...'
+  },
+  3: {
+      titleImage: 'assets/questao3.jpg',
+      developmentText: 'Desenvolvimento da Questão 3...',
+      answerText: 'Resposta para a Questão 3...'
+  },
+  4: {
+      titleImage: 'assets/questao4.jpg',
+      developmentText: 'Desenvolvimento da Questão 4...',
+      answerText: 'Resposta para a Questão 4...'
+  },
+  5: {
+      titleImage: 'assets/questao5.jpg',
+      developmentText: 'Desenvolvimento da Questão 5...',
+      answerText: 'Resposta para a Questão 5...'
+  }
+};
+
+document.querySelectorAll('.button').forEach(button => {
+  button.addEventListener('click', function() {
+      const id = this.getAttribute('data-id');
+      if (messages[id]) {
+          const { titleImage, developmentText, answerText } = messages[id];
+          updateMessage(titleImage, developmentText, answerText);
+      }
+  });
+});
 
 document.getElementById('externalLinkButton').addEventListener('click', function() {
   window.location.href = 'https://www.linkedin.com/in/jo%C3%A3o-vitor-rafagnin-611678129/'; // Substitua pelo URL desejado
