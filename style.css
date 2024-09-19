@@ -1,0 +1,68 @@
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilos para a div do banner */
+.banner {
+    background-image: url('banner-image.jpg'); /* Caminho da imagem do banner */
+    background-size: cover; /* Cobrir toda a área */
+    background-position: center; /* Centralizar imagem */
+    padding: 50px 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    color: white; /* Cor do texto */
+    max-width: 600px; /* Largura máxima */
+    margin: 0 auto; /* Centraliza a div na página */
+}
+
+/* Div para o título */
+.title-section {
+    background: rgba(0, 0, 0, 0.6); /* Fundo semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para o título */
+.title-section h1 {
+    font-family: 'Gotham Bold', sans-serif; /* Fonte personalizada */
+    font-size: 36px;
+    margin: 0;
+    color: #fff;
+}
+
+/* Div para o conteúdo, incluindo o botão */
+.content-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Estilos para o botão */
+#myButton {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+#myButton:hover {
+    background-color: #005f73;
+}
+
+/* Estilos para a mensagem abaixo do banner */
+#message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #005f73;
+    max-width: 600px;
+    margin: 20px auto; /* Centraliza abaixo do banner */
+}
