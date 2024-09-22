@@ -1,26 +1,21 @@
 {
     "1": {
-        "title": "Título da Questão 1",
         "development": "Desenvolvimento da Questão 1",
         "answer": "Resposta da Questão 1"
     },
     "2": {
-        "title": "Título da Questão 2",
         "development": "Desenvolvimento da Questão 2",
         "answer": "Resposta da Questão 2"
     },
     "3": {
-        "title": "Título da Questão 3",
         "development": "Desenvolvimento da Questão 3",
         "answer": "Resposta da Questão 3"
     },
     "4": {
-        "title": "Título da Questão 4",
         "development": "Desenvolvimento da Questão 4",
         "answer": "Resposta da Questão 4"
     },
     "5": {
-        "title": "Título da Questão 5",
         "development": "Desenvolvimento da Questão 5",
         "answer": "Resposta da Questão 5"
     }

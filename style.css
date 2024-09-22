@@ -124,3 +124,12 @@ body {
     width: 100%; /* Largura ajustada ao contêiner */
     height: auto; /* Altura ajustada automaticamente pelo JavaScript */
 }
+
+/* Estilos específicos para a imagem de título */
+#message-development {
+    padding-left: 50px;
+    text-align: left;
+    width: 100%; /* Largura ajustada ao contêiner */
+    font-size: 20px;
+    font-family: 'Gotham Bold', sans-serif; /* Fonte personalizada para o texto de desenvolvimento */
+}

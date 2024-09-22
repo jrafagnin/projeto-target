@@ -20,8 +20,37 @@ function updateMessage(messageTitleUrl, developmentText, answerText) {
 const messages = {
   1: {
       titleImage: 'assets/questao1.jpg',
-      developmentText: 'Desenvolvimento da Questão 1...',
-      answerText: 'Resposta para a Questão 1...'
+      developmentText: `
+Levando em conta os dados de input:
+
+	INDICE = 12
+	SOMA = 0
+	K = 1
+
+O código informado ira atuar da seguinte forma:
+
+	- Cria-se um loop com While tendo a condição de:
+		"enquanto K for menor que INDICE faca"
+
+	- Executa o código onde:
+		"acrescenta 1 em K e armazena o valor atual de SOMA somado ao valor atual de K"
+
+	- Imprime o valor de SOMA.
+
+O código executado em JavaScript sera:
+
+const INDICE = 12;
+let SOMA = 0;
+let K = 1;
+
+while (K < INDICE) {
+    K += 1; // Usando incremento +=
+    SOMA += K; // Usando incremento +=
+}
+
+console.log(SOMA);
+`,
+      answerText: 'Resposta: Ao final do processamento a variavel SOMA, tera o valor de 77.'
   },
   2: {
       titleImage: 'assets/questao2.jpg',
