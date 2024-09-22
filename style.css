@@ -127,9 +127,28 @@ body {
 
 /* Estilos específicos para a imagem de título */
 #message-development {
+    padding: 30px;
     padding-left: 50px;
     text-align: left;
     width: 100%; /* Largura ajustada ao contêiner */
     font-size: 20px;
+    font-weight: 500;
     font-family: 'Gotham Bold', sans-serif; /* Fonte personalizada para o texto de desenvolvimento */
+}
+
+#message-answer {
+    padding-left: 50px;
+    padding: 30px;
+    text-align: left;
+    width: 100%; /* Largura ajustada ao contêiner */
+    font-weight: 800;
+    font-size: 20px;
+    font-family: 'Gotham Bold', sans-serif; /* Fonte personalizada para o texto de desenvolvimento */
+    border: 1px solid #57c55c; /* Adiciona uma borda para separar a área da mensagem */
+    border-radius: 8px; /* Bordas arredondadas */
+    background-color: #57c55c; /* Fundo branco para destacar o texto */
+    box-sizing: border-box; /* Inclui o padding e border na largura total */
+    margin-left: auto; /* Centraliza horizontalmente */
+    margin-right: auto; /* Centraliza horizontalmente */
+    position: relative; /* Para ajustes futuros */
 }
