@@ -4,22 +4,21 @@ body {
     background-color: #f4f4f4;
     text-align: center;
     padding: 0;
-    margin: 0; /* Remove a margem padrão do body */
+    margin: 0; 
 }
 
 /* Estilos para a div do banner */
 .banner {
-    background-image: url('assets/banner-target.jpg'); /* Caminho da imagem do banner */
-    background-size: cover; /* Cobrir toda a área */
-    background-position: center; /* Centralizar imagem */
-    height: 473px; /* Altura específica do banner */
-    width: 100%; /* Ocupa 100% da largura */
-    display: flex; /* Usar Flexbox */
-    flex-direction: column; /* Empilhar os elementos verticalmente */
-    justify-content: center; /* Centralizar verticalmente */
-    align-items: center; /* Centralizar horizontalmente */
-    color: white; /* Cor do texto */
-    box-sizing: border-box; /* Inclui o padding e border na largura total */
+    background-image: url('assets/banner-target.jpg'); 
+    background-position: center; 
+    height: 473px; 
+    width: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    color: white; 
+    box-sizing: border-box; 
 }
 
 /* Div para o título */
@@ -31,13 +30,13 @@ body {
 
 /* Estilos para o título */
 .title-section h1 {
-    font-family: 'Gotham Bold', sans-serif; /* Fonte personalizada */
+    font-family: 'Gotham Bold', sans-serif; 
     font-size: 36px;
     margin: 0;
     color: #fff;
 }
 
-/* Div para o conteúdo, incluindo os botões */
+
 .content-section {
     display: flex;
     flex-direction: column;
@@ -48,8 +47,8 @@ body {
 .button-container {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Permite que os botões se movam para a linha seguinte em telas menores */
-    gap: 10px; /* Espaço entre os botões */
+    flex-wrap: wrap; 
+    gap: 10px; 
 }
 
 /* Estilos para os botões */
@@ -58,97 +57,117 @@ body {
     color: white;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px; /* Adiciona bordas arredondadas aos botões */
+    border-radius: 5px; 
     cursor: pointer;
-    font-family: 'Gotham Regular', sans-serif; /* Fonte personalizada para botões */
+    font-family: 'Gotham Regular', sans-serif; 
     font-size: 16px;
-    margin: 5px; /* Adiciona um espaço ao redor dos botões */
-    transition: 0.3s ease all; /* Transição suave para a mudança de estilo */
+    font-weight: 600;
+    margin: 5px; 
+    transition: 0.3s ease all; 
 }
 
 .button:hover {
     background-color: #F54C20;
-    transform: scale(1.1); /* Aumenta o tamanho do botão em 10% */
+    transform: scale(1.1); 
 }
 
-/* Estilos para o botão do link externo */
-#externalLinkButton {
+/* Estilos para o botão linkedin */
+#buttonLinkedin {
     background-color: #2867B2;
     color: white;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px; /* Adiciona bordas arredondadas aos botões */
+    border-radius: 5px; 
     cursor: pointer;
-    font-family: 'Gotham Regular', sans-serif; /* Fonte personalizada para botões */
+    font-family: 'Gotham Regular', sans-serif; 
     font-size: 16px;
-    margin: 5px; /* Adiciona um espaço ao redor dos botões */
-    transition: 0.3s ease all; /* Transição suave para a mudança de estilo */
+    font-weight: 600;
+    margin: 5px; 
+    transition: 0.3s ease all; 
+}
+#buttonLinkedin:hover {
+    background-color: #273AB3;
+    transform: scale(1.1); 
 }
 
-#externalLinkButton:hover {
-    background-color: #273AB3;
-    transform: scale(1.1); /* Aumenta o tamanho do botão em 10% */
+/* Estilos para o botão github */
+#buttonGithub {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+    font-family: 'Gotham Regular', sans-serif; 
+    font-size: 16px;
+    font-weight: 600;
+    margin: 5px; 
+    transition: 0.3s ease all; 
+}
+#buttonGithub:hover {
+    background-color: #424242;
+    transform: scale(1.1); 
 }
 
 /* Estilos para o contêiner da mensagem */
 #message-container {
-    height: auto; /* Altura ajustada automaticamente */
+    height: auto; 
     margin-top: 20px;
-    width: 100%; /* 90% da largura do banner para permitir espaço nas laterais */
-    max-width: 100%; /* Garante que a largura máxima não ultrapasse 90% */
-    overflow-x: hidden; /* Remove o scroll horizontal */
-    overflow-y: auto; /* Permite o scroll vertical */
-    padding: 10px; /* Adiciona um pouco de preenchimento */
-    border: 1px solid #ddd; /* Adiciona uma borda para separar a área da mensagem */
-    border-radius: 8px; /* Bordas arredondadas */
-    background-color: #fff; /* Fundo branco para destacar o texto */
-    box-sizing: border-box; /* Inclui o padding e border na largura total */
-    margin-left: auto; /* Centraliza horizontalmente */
-    margin-right: auto; /* Centraliza horizontalmente */
-    position: relative; /* Para ajustes futuros */
+    width: 100%; 
+    max-width: 100%; 
+    overflow-x: hidden; 
+    overflow-y: auto; 
+    padding: 10px; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    background-color: #fff; 
+    box-sizing: border-box; 
+    margin-left: auto; 
+    margin-right: auto; 
+    position: relative; 
 }
 
 /* Estilos para cada parte da mensagem */
 .message-box {
-    margin-bottom: 3px; /* Espaçamento entre as partes da mensagem */
+    margin-bottom: 3px; 
     padding: 3px;
     border-radius: 3px;
-    width: 100%; /* Garante que cada parte ocupe a largura disponível */
+    width: 100%; 
 }
 
-/* Estilos específicos para a imagem de título */
+/* Estilos específicos para o título */
 #message-title {
-    background-size: cover; /* Ajusta a imagem ao tamanho da div mantendo a proporção */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita que a imagem se repita */
-    width: 100%; /* Largura ajustada ao contêiner */
-    height: auto; /* Altura ajustada automaticamente pelo JavaScript */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    width: 100%; 
+    height: auto; 
 }
 
-/* Estilos específicos para a imagem de título */
+/* Estilos específicos para o desenvolvimento */
 #message-development {
     padding: 30px;
     padding-left: 50px;
     text-align: left;
-    width: 100%; /* Largura ajustada ao contêiner */
+    width: 100%; 
     font-size: 20px;
     font-weight: 500;
-    font-family: 'Gotham Bold', sans-serif; /* Fonte personalizada para o texto de desenvolvimento */
+    font-family: 'Gotham Bold', sans-serif; 
 }
-
+/* Estilos específicos para a resposta */
 #message-answer {
     padding-left: 50px;
     padding: 30px;
     text-align: left;
-    width: 100%; /* Largura ajustada ao contêiner */
+    width: 100%; 
     font-weight: 800;
     font-size: 20px;
-    font-family: 'Gotham Bold', sans-serif; /* Fonte personalizada para o texto de desenvolvimento */
-    border: 1px solid #57c55c; /* Adiciona uma borda para separar a área da mensagem */
-    border-radius: 8px; /* Bordas arredondadas */
-    background-color: #57c55c; /* Fundo branco para destacar o texto */
-    box-sizing: border-box; /* Inclui o padding e border na largura total */
-    margin-left: auto; /* Centraliza horizontalmente */
-    margin-right: auto; /* Centraliza horizontalmente */
-    position: relative; /* Para ajustes futuros */
+    font-family: 'Gotham Bold', sans-serif; 
+    border: 1px solid #57c55c; 
+    border-radius: 8px; 
+    background-color: #57c55c; 
+    box-sizing: border-box; 
+    margin-left: auto; 
+    margin-right: auto; 
+    position: relative; 
 }
