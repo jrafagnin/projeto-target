@@ -40,7 +40,7 @@ loadMessages().then(messages => {
   });
 });
 
-document.getElementById('externalLinkButton').addEventListener('click', function() {
+document.getElementById('buttonLinkedin').addEventListener('click', function() {
   window.location.href = 'https://www.linkedin.com/in/jo%C3%A3o-vitor-rafagnin-611678129/'; 
 });
 
