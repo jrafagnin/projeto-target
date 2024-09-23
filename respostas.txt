@@ -1,0 +1,127 @@
+1)
+Ao final do processamento a variável SOMA terá o valor de 77.
+
+
+2)
+a) Os números são incrementados de 2 em 2
+b) Os números são multiplicados de 2 em 2
+c) Os números são definidos por seu índice elevado ao quadrado
+d) Os números são definidos como a (raiz quadrada do número anterior + 2)²
+e) Os números são a soma dos dois números anteriores
+f) Os números são todos que iniciam com a letra D em ordem crescente
+
+RESPOSTAS:
+a) 7 + 2 = 9
+b) 64 * 2 = 128
+c) 7² = 49
+d) ((raiz quadrada de 64)+2)² = 100
+e) 8 + 5 = 13
+f) 200
+
+
+3)
+Optei por utilizar JavaScript devido à minha maior familiaridade com a linguagem. Inicialmente, declarei uma função para retornar os valores solicitados no enunciado.
+Em seguida, utilizei o método filter para remover do vetor os dias sem faturamento, selecionando apenas os valores maiores que zero.
+
+Apliquei o método reduce para somar todos os elementos do array filtrado, obtendo o valor total do faturamento. A média anual foi calculada dividindo a soma total pela 
+quantidade de dias com faturamento.
+
+Para determinar o menor e o maior valor de faturamento, utilizei os métodos Math.min e Math.max, respectivamente, sobre o array filtrado. Por fim, apliquei o método filter mais uma vez para identificar 
+os dias em que o faturamento superou a média anual, contando a quantidade de elementos no novo array resultante.
+function analisarFaturamento(faturamentoDiario) {
+
+const diasComFaturamento = faturamentoDiario.filter(valor => valor > 0);
+
+const somaTotal = diasComFaturamento.reduce((total, valor) => total + valor, 0);
+
+const mediaAnual = somaTotal / diasComFaturamento.length;
+
+const menorValor = Math.min(...diasComFaturamento);
+const maiorValor = Math.max(...diasComFaturamento);
+
+const diasAcimaDaMedia = diasComFaturamento.filter(valor => valor > mediaAnual).length;
+
+return {
+menorValor,
+maiorValor,
+diasAcimaDaMedia
+};
+}
+
+const faturamentoDiario = [1000, 2000, 0, 3000, 1500, 0, 2500];
+const resultado = analisarFaturamento(faturamentoDiario);
+
+console.log("Menor valor:", resultado.menorValor);
+console.log("Maior valor:", resultado.maiorValor);
+console.log("Dias acima da média:", resultado.diasAcimaDaMedia);
+
+4)
+Entidades:
+
+Clientes
+- id_cliente (PK)
+- nome
+- razao_social
+- id_estado (FK)
+
+Telefones
+-id_telefone (PK)
+-numero
+-id_cliente (FK)
+-id_tipo_telefone (FK)
+
+Tipos_Telefone
+- id_tipo_telefone (PK)
+- descricao
+
+Estados
+- id_estado (PK)
+- uf (sigla do estado)
+- nome estado
+
+Relacionamentos:
+Clientes -> Telefones (1:N): Um cliente pode ter vários telefones.
+Telefones -> Tipos_Telefone (N:1): Cada telefone tem um tipo.
+Clientes -> Estados (N:1): Cada cliente pertence a um estado.
+
+Diagrama relacional:
+Clientes → Telefones (PK de Clientes como FK em Telefones)
+Telefones → Tipos_Telefone (PK de Tipos_Telefone como FK em Telefones)
+Clientes → Estados (PK de Estados como FK em Clientes)
+
+SELECT c.id_cliente, c.razao_social, t.numero
+FROM Clientes c
+JOIN Telefones t ON c.id_cliente = t.id_cliente
+JOIN Estados e ON c.id_estado = e.id_estado
+WHERE e.uf = 'SP';
+
+
+5) 
+Primeiro precisamos determinar em qual ponto da rodovia os veículos irão se cruzar, para isso pode-se utilizar de conceitos de Movimento Retilíneo Uniforme
+(MRU). 
+
+Utilizarei Ribeirão preto como ponto de referencia então as equações horarias serão respectivamente:
+
+carro -> x1 = v1*t
+caminhão -> x2 = 125km - v2*t (Como o caminhão sai de Barretos, ele inicia seu movimento a 125km do ponto de referencia)
+
+Como o carro possui 3 pedágios e cada pedágio acrescentara 5 minutos a sua viagem, sua velocidade media será influenciada, sendo assim a 
+nova velocidade media do carro pode ser medida da seguinte forma
+
+Tempo de viagem do carro sem os pedágios = 125km/90kmh = 1,39h
+Adicionando 15 minutos (ou 0,25h) o seu tempo total será de 1,64h
+Sua velocidade media será atribuída pela função v2 = 125km/1,64h = 76,22km/h
+
+Para se descobrir onde os veículos se cruzaram, pode-se isolar o tempo das equações horarias e equalizadas
+t = x1/v1 <- equação do carro
+t = (x2 - 125) / - v2 <- equação do caminhão
+
+Então a equação para descobrir em qual ponto da estrada se encontraram será
+
+x/v1 = (x-125km) / -v2
+-v2 * x = v1 * x - v1*125km
+x = (v1 * 125km) / v1 + v2
+x = 76,22kmh * 125 / 76,22kmh + 80kmh
+x = 9527,5 / 156,22
+x = 60,9 km de distancia de ribeirão preto
+
