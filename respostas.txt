@@ -125,3 +125,6 @@ x = 76,22kmh * 125 / 76,22kmh + 80kmh
 x = 9527,5 / 156,22
 x = 60,9 km de distancia de ribeirão preto
 
+RESPOSTA:
+Levando em conta o enunciado, a resposta seria que ambos estarão à mesma distância de Ribeirão Preto, porém o caminhão terá percorrido 64,1 km do
+percurso de 125 km, enquanto o carro terá percorrido 60,9 km do percurso.
